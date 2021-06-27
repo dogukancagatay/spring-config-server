@@ -1,0 +1,26 @@
+---
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+
+spring:
+  profiles:
+    active: native
+  security:
+    basic:
+      enabled: true
+    user:
+      name: test
+      password: test
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations:
+            - file:./src/test/resources/test-config-repo
+            - file:./src/test/resources/test-config-repo/{application}
+#            - classpath:/
+#            - classpath:/config
+#            - file:./

@@ -1,0 +1,19 @@
+---
+server:
+  port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+
+spring:
+  profiles:
+    active: native,file
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: admin

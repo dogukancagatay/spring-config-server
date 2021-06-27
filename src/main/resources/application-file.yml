@@ -1,0 +1,12 @@
+---
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations:
+            - file:./src/test/resources/test-config-repo
+            - file:./src/test/resources/test-config-repo/{application}
+#            - classpath:/
+#            - classpath:/config
+#            - file:./

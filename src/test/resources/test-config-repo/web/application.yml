@@ -1,0 +1,7 @@
+server:
+  port: 9080
+
+type: normal
+
+some:
+  property: "123"
